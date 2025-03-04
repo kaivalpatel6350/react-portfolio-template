@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "message": "I want to create new screen with demos and put into menu.",
+    "type": "user",
+    "timestamp": "2025-03-04T01:51:16.952Z",
+    "previousBranch": "main",
+    "screenId": 1
+  }
+]
