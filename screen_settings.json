@@ -9,7 +9,10 @@
       "_app.js",
       "index.js"
     ],
-    "timestamp": "2025-03-04T02:02:15.286Z"
+    "timestamp": "2025-03-04T02:02:15.286Z",
+    "components": [
+      "AddDemosComponent"
+    ]
   },
   {
     "userMessage": "create new screen to add demos",
