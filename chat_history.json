@@ -184,5 +184,12 @@
     "type": "bot",
     "timestamp": "2025-03-04T03:40:07.494Z",
     "screenId": 7
+  },
+  {
+    "message": "I want to create blog as grid view in table format",
+    "type": "user",
+    "timestamp": "2025-03-04T03:47:46.455Z",
+    "previousBranch": "ai-changes/2025-03-04T03-40-05-389Z--new-created-aboutscreen-overv",
+    "screenId": 8
   }
 ]
