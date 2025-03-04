@@ -77,9 +77,6 @@
     "screenId": 1
   },
   {
-    "branch": "ai-changes/2025-03-04T03-17-36-317Z--new-created-adddemos-overview"
-  },
-  {
     "message": "New component created successfully!",
     "type": "bot",
     "timestamp": "2025-03-04T03:17:38.404Z",
@@ -97,5 +94,14 @@
     "type": "bot",
     "timestamp": "2025-03-04T03:18:12.500Z",
     "screenId": 4
+  },
+  {
+    "message": "\n  <div class=\"component-summary\">\n    <div class=\"summary-header\">\n      <span class=\"summary-icon\">✨</span>\n      <h2>New Component Created!</h2>\n    </div>\n    \n    <div class=\"component-name\">\n      <span class=\"icon\">🎯</span>\n      <strong>MenuDemoScreenComponent</strong>\n    </div>\n\n    <div class=\"summary-content\">\n      <div class=\"summary-section\"><span class=\"icon\">📝</span><h3>Overview</h3><p></p></div><p>This component creates a menu management interface where users can add, edit, and delete menu items. It displays a form for inputting item details (name, description, price, and category) and shows all menu items in a list format. Each menu item can be edited or removed, and the interface features a clean, modern design with hover effects and visual feedback for user interactions.</p><p></p><p>In simple terms, it's like a digital menu board editor that restaurant owners might use to manage their menu items.</p>\n    </div>\n\n    <div class=\"summary-footer\">\n      <span class=\"icon\">💡</span>\n      <p>Find this component in the sidebar and drag it onto your canvas to get started!</p>\n    </div>\n  </div>\n",
+    "type": "bot-summary",
+    "timestamp": "2025-03-04T03:18:53.231Z",
+    "screenId": 4
+  },
+  {
+    "branch": "ai-changes/2025-03-04T03-18-52-166Z--new-created-menudemoscreen-ov"
   }
 ]
