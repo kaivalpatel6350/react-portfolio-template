@@ -68,5 +68,19 @@
     "components": [
       "AddProjectComponent"
     ]
+  },
+  {
+    "userMessage": "I want to update about section and make it for software developer having 15 years of experience in full stack.",
+    "screen_id": 6,
+    "required_files": [
+      "portfolio.js",
+      "resume.js",
+      "[slug].js",
+      "markdownToHtml.js"
+    ],
+    "timestamp": "2025-03-04T03:30:27.132Z",
+    "components": [
+      "DevExperienceAboutComponent"
+    ]
   }
 ]
