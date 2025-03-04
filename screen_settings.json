@@ -1,113 +1,15 @@
 [
   {
-    "userMessage": "add demos screen",
+    "userMessage": "Create grid view for blog",
     "screen_id": 1,
     "required_files": [
+      "index.js",
       "portfolio.js",
-      "resume.js",
       "[slug].js",
-      "_app.js",
-      "index.js"
-    ],
-    "timestamp": "2025-03-04T02:02:15.286Z",
-    "components": [
-      "AddDemosComponent"
-    ]
-  },
-  {
-    "userMessage": "create new screen to add demos",
-    "screen_id": 2,
-    "required_files": [
-      "edit.js",
-      "portfolio.js",
-      "api.js",
-      "[slug].js"
-    ],
-    "timestamp": "2025-03-04T03:03:59.491Z",
-    "components": [
-      "DemosComponent"
-    ]
-  },
-  {
-    "userMessage": "I want to add new screen for demo",
-    "screen_id": 3,
-    "required_files": [
-      "[slug].js",
-      "edit.js",
-      "portfolio.js",
-      "resume.js",
-      "_app.js",
-      "globals.css"
-    ],
-    "timestamp": "2025-03-04T03:06:36.210Z"
-  },
-  {
-    "userMessage": "I would like to create new screen and demo in menu",
-    "screen_id": 4,
-    "required_files": [
-      "DemosComponent.tsx",
-      "AddDemosComponent.tsx",
-      "_app.js",
-      "edit.js"
-    ],
-    "timestamp": "2025-03-04T03:18:11.495Z",
-    "components": [
-      "MenuDemoScreenComponent"
-    ]
-  },
-  {
-    "userMessage": "I want to add more projects",
-    "screen_id": 5,
-    "required_files": [
-      "AddDemosComponent.tsx",
-      "DemosComponent.tsx",
-      "portfolio.js",
-      "api.js"
-    ],
-    "timestamp": "2025-03-04T03:21:19.826Z",
-    "components": [
-      "AddProjectComponent"
-    ]
-  },
-  {
-    "userMessage": "I want to update about section and make it for software developer having 15 years of experience in full stack.",
-    "screen_id": 6,
-    "required_files": [
-      "portfolio.js",
-      "resume.js",
-      "[slug].js",
-      "markdownToHtml.js"
-    ],
-    "timestamp": "2025-03-04T03:30:27.132Z",
-    "components": [
-      "DevExperienceAboutComponent"
-    ]
-  },
-  {
-    "userMessage": "I want to create new screen for about with new content.",
-    "screen_id": 7,
-    "required_files": [
-      "[slug].js",
-      "DevExperienceAboutComponent.tsx",
-      "_app.js",
       "globals.css",
-      "markdownToHtml.js"
+      "markdown.css"
     ],
-    "timestamp": "2025-03-04T03:39:17.787Z",
-    "components": [
-      "AboutScreenComponent"
-    ]
-  },
-  {
-    "userMessage": "I want to create blog as grid view in table format",
-    "screen_id": 8,
-    "required_files": [
-      "DemosComponent.tsx",
-      "AddProjectComponent.tsx",
-      "portfolio.js",
-      "globals.css"
-    ],
-    "timestamp": "2025-03-04T03:47:46.379Z",
+    "timestamp": "2025-03-04T03:50:00.001Z",
     "components": [
       "BlogGridComponent"
     ]

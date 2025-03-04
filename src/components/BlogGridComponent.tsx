@@ -1,66 +1,47 @@
-import React, { useState } from 'react';
-import {
-  Container,
+import React, { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
+import { gsap, Power3 } from 'gsap';
+import { 
   Grid,
-  Card, 
-  CardContent,
+  Card,
   CardMedia,
+  CardContent,
   Typography,
   Box,
-  styled,
-  Paper
+  styled
 } from '@mui/material';
 
-interface BlogPost {
-  id: string;
-  title: string; 
-  description: string;
-  date: string;
-  imageUrl: string;
-  author: string;
+interface BlogGridConfig {
+  posts: {
+    slug: string;
+    frontmatter: {
+      title: string;
+      date: string;
+      tagline: string;
+      preview: string;
+      image: string;
+    };
+  }[];
+  onPostClick: (slug: string) => void;
 }
 
-const StyledContainer = styled(Container)(({ theme }) => ({
-  backgroundColor: '#FFFFFF',
-  padding: '40px 0'
-}));
-
-const StyledPaper = styled(Paper)({
-  backgroundColor: '#F5F5F5',
-  padding: '40px 20px',
-  borderRadius: '12px'
-});
-
-const PageTitle = styled(Typography)({
-  color: '#1A1A1A',
-  marginBottom: '40px',
-  fontWeight: 700,
-  textAlign: 'center',
-  fontSize: '2.5rem',
-  textTransform: 'uppercase',
-  letterSpacing: '2px'
-});
-
-const StyledCard = styled(Card)({
+const StyledCard = styled(Card)(({ theme }) => ({
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
-  transition: 'all 0.3s ease',
+  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
   backgroundColor: '#FFFFFF',
-  borderRadius: '8px',
-  overflow: 'hidden',
-  border: '1px solid #D9D9D9',
   '&:hover': {
     transform: 'translateY(-8px)',
-    boxShadow: '0 12px 24px rgba(0,0,0,0.15)',
-    border: '1px solid #A6A6A6'
+    boxShadow: '0 12px 20px rgba(0, 0, 0, 0.1)',
+    backgroundColor: '#F5F5F5'
   }
-});
+}));
 
 const StyledCardMedia = styled(CardMedia)({
-  paddingTop: '56.25%',
+  height: 240,
   backgroundSize: 'cover',
-  transition: 'transform 0.3s ease',
+  transition: 'transform 0.3s ease-in-out',
   '&:hover': {
     transform: 'scale(1.05)'
   }
@@ -69,100 +50,80 @@ const StyledCardMedia = styled(CardMedia)({
 const StyledCardContent = styled(CardContent)({
   flexGrow: 1,
   padding: '24px',
-  backgroundColor: '#FFFFFF'
+  backgroundColor: 'transparent'
 });
 
-const PostTitle = styled(Typography)({
-  color: '#333333',
-  fontWeight: 600,
-  fontSize: '1.25rem',
-  marginBottom: '12px',
-  lineHeight: 1.4
-});
+const BlogGridComponent = ({ config }: { config: BlogGridConfig }) => {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-const PostDescription = styled(Typography)({
-  color: '#4D4D4D',
-  fontSize: '0.95rem',
-  lineHeight: 1.6,
-  marginBottom: '20px'
-});
-
-const MetaInfo = styled(Box)({
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  color: '#666666',
-  fontSize: '0.85rem',
-  borderTop: '1px solid #D9D9D9',
-  paddingTop: '16px',
-  marginTop: 'auto'
-});
-
-const BlogGridComponent = ({config}: {config: any}) => {
-  const [blogPosts] = useState<BlogPost[]>([
-    {
-      id: '1',
-      title: 'Getting Started with React',
-      description: 'Learn the basics of React and start building your first application',
-      date: '2023-05-01',
-      imageUrl: 'https://source.unsplash.com/random/800x600?react',
-      author: 'John Doe'
-    },
-    {
-      id: '2',
-      title: 'Advanced TypeScript Patterns',
-      description: 'Explore advanced TypeScript patterns and best practices',
-      date: '2023-05-02',
-      imageUrl: 'https://source.unsplash.com/random/800x600?typescript',
-      author: 'Jane Smith'
-    },
-    {
-      id: '3',
-      title: 'CSS Grid Layout Mastery',
-      description: 'Master CSS Grid Layout with practical examples',
-      date: '2023-05-03',
-      imageUrl: 'https://source.unsplash.com/random/800x600?css',
-      author: 'Mike Johnson'
-    }
-  ]);
+  useEffect(() => {
+    setMounted(true);
+    gsap.from('.blog-card', {
+      opacity: 0,
+      y: 60,
+      stagger: 0.2,
+      ease: Power3.easeOut
+    });
+  }, []);
 
   return (
-    <StyledContainer maxWidth="lg">
-      <StyledPaper elevation={0}>
-        <PageTitle variant="h1">
-          Blog Posts
-        </PageTitle>
-
-        <Grid container spacing={4}>
-          {blogPosts.map((post) => (
-            <Grid item key={post.id} xs={12} sm={6} md={4}>
-              <StyledCard>
-                <StyledCardMedia
-                  image={post.imageUrl}
-                  title={post.title}
-                />
-                <StyledCardContent>
-                  <PostTitle>
-                    {post.title}
-                  </PostTitle>
-                  <PostDescription>
-                    {post.description}
-                  </PostDescription>
-                  <MetaInfo>
-                    <Typography>
-                      By {post.author}
-                    </Typography>
-                    <Typography>
-                      {new Date(post.date).toLocaleDateString()}
-                    </Typography>
-                  </MetaInfo>
-                </StyledCardContent>
-              </StyledCard>
-            </Grid>
-          ))}
-        </Grid>
-      </StyledPaper>
-    </StyledContainer>
+    <Box sx={{ flexGrow: 1, mt: 5 }}>
+      <Grid container spacing={4}>
+        {config.posts.map((post) => (
+          <Grid item xs={12} sm={6} md={4} key={post.slug} className="blog-card">
+            <StyledCard 
+              onClick={() => config.onPostClick(post.slug)}
+              sx={{
+                cursor: 'pointer',
+                bgcolor: theme === 'dark' ? '#1A1A1A' : '#FFFFFF',
+                color: theme === 'dark' ? '#FFFFFF' : '#000000'
+              }}
+            >
+              <StyledCardMedia
+                image={post.frontmatter.image}
+                title={post.frontmatter.title}
+              />
+              <StyledCardContent>
+                <Typography 
+                  variant="h5" 
+                  component="h2" 
+                  gutterBottom
+                  sx={{ 
+                    fontWeight: 600,
+                    color: theme === 'dark' ? '#FFFFFF' : '#333333'
+                  }}
+                >
+                  {post.frontmatter.title}
+                </Typography>
+                <Typography 
+                  variant="body2" 
+                  color="textSecondary"
+                  sx={{ 
+                    mb: 2,
+                    color: theme === 'dark' ? '#A6A6A6' : '#666666'
+                  }}
+                >
+                  {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}
+                </Typography>
+                <Typography 
+                  variant="body1"
+                  sx={{
+                    color: theme === 'dark' ? '#D9D9D9' : '#4D4D4D'
+                  }}
+                >
+                  {post.frontmatter.tagline}
+                </Typography>
+              </StyledCardContent>
+            </StyledCard>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
   );
 };
 
