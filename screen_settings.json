@@ -40,5 +40,19 @@
       "globals.css"
     ],
     "timestamp": "2025-03-04T03:06:36.210Z"
+  },
+  {
+    "userMessage": "I would like to create new screen and demo in menu",
+    "screen_id": 4,
+    "required_files": [
+      "DemosComponent.tsx",
+      "AddDemosComponent.tsx",
+      "_app.js",
+      "edit.js"
+    ],
+    "timestamp": "2025-03-04T03:18:11.495Z",
+    "components": [
+      "MenuDemoScreenComponent"
+    ]
   }
 ]
