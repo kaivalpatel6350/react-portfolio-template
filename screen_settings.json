@@ -54,5 +54,19 @@
     "components": [
       "MenuDemoScreenComponent"
     ]
+  },
+  {
+    "userMessage": "I want to add more projects",
+    "screen_id": 5,
+    "required_files": [
+      "AddDemosComponent.tsx",
+      "DemosComponent.tsx",
+      "portfolio.js",
+      "api.js"
+    ],
+    "timestamp": "2025-03-04T03:21:19.826Z",
+    "components": [
+      "AddProjectComponent"
+    ]
   }
 ]
