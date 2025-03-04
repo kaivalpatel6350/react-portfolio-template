@@ -13,16 +13,9 @@
     "screenId": 1
   },
   {
-    "message": "\n  <div class=\"component-summary\">\n    <div class=\"summary-header\">\n      <span class=\"summary-icon\">✨</span>\n      <h2>New Component Created!</h2>\n    </div>\n    \n    <div class=\"component-name\">\n      <span class=\"icon\">🎯</span>\n      <strong>DemoScreenComponent</strong>\n    </div>\n\n    <div class=\"summary-content\">\n      <div class=\"summary-section\"><span class=\"icon\">📝</span><h3>Overview</h3><p></p></div><p>This is a demo screen component that provides a user interface for switching between different demo examples. It features a responsive layout with a theme toggle (light/dark mode), navigation buttons for desktop view, and a dropdown menu for mobile devices. The component displays different demo content based on user selection, making it easy to showcase multiple examples in a clean, organized manner.</p><p></p><p>This simple description captures the main functionality without diving into technical implementation details.</p>\n    </div>\n\n    <div class=\"summary-footer\">\n      <span class=\"icon\">💡</span>\n      <p>Find this component in the sidebar and drag it onto your canvas to get started!</p>\n    </div>\n  </div>\n",
-    "type": "bot-summary",
-    "timestamp": "2025-03-04T01:53:04.675Z",
-    "screenId": 1
-  },
-  {},
-  {
-    "message": "New component created successfully!",
-    "type": "bot",
-    "timestamp": "2025-03-04T01:53:11.810Z",
-    "screenId": 1
+    "message": "Error: Screen with ID -Infinity not found in settings",
+    "type": "error",
+    "timestamp": "2025-03-04T01:57:10.902Z",
+    "screenId": null
   }
 ]
