@@ -20,7 +20,10 @@
       "api.js",
       "[slug].js"
     ],
-    "timestamp": "2025-03-04T03:03:59.491Z"
+    "timestamp": "2025-03-04T03:03:59.491Z",
+    "components": [
+      "DemosComponent"
+    ]
   },
   {
     "userMessage": "I want to add new screen for demo",
