@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "message": "Create new screen of blog with having existing blog data but table view",
+    "type": "user",
+    "timestamp": "2025-03-04T03:59:15.552Z",
+    "previousBranch": "main",
+    "screenId": 1
+  }
+]
