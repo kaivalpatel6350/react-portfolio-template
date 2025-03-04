@@ -69,5 +69,14 @@
     "type": "bot",
     "timestamp": "2025-03-04T03:17:01.142Z",
     "screenId": 1
+  },
+  {
+    "message": "\n  <div class=\"component-summary\">\n    <div class=\"summary-header\">\n      <span class=\"summary-icon\">✨</span>\n      <h2>New Component Created!</h2>\n    </div>\n    \n    <div class=\"component-name\">\n      <span class=\"icon\">🎯</span>\n      <strong>AddDemosComponent</strong>\n    </div>\n\n    <div class=\"summary-content\">\n      <div class=\"summary-section\"><span class=\"icon\">📝</span><h3>Overview</h3><p></p></div><p>This component creates a form interface for adding new demos to a portfolio or showcase section. It allows users to input details like title, description, URLs (demo and GitHub), and a preview image. The form works only in development mode and includes validation. Once submitted, it saves the demo information and redirects users to the demos page. The interface features a clean, responsive design with dark/light theme support.</p><p></p><p>The component provides a user-friendly way to manage and add new demo projects to a website's collection, with clear input fields and intuitive navigation controls.</p>\n    </div>\n\n    <div class=\"summary-footer\">\n      <span class=\"icon\">💡</span>\n      <p>Find this component in the sidebar and drag it onto your canvas to get started!</p>\n    </div>\n  </div>\n",
+    "type": "bot-summary",
+    "timestamp": "2025-03-04T03:17:37.441Z",
+    "screenId": 1
+  },
+  {
+    "branch": "ai-changes/2025-03-04T03-17-36-317Z--new-created-adddemos-overview"
   }
 ]
