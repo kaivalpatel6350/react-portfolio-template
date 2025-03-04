@@ -37,5 +37,12 @@
     "timestamp": "2025-03-04T03:03:59.567Z",
     "previousBranch": "main",
     "screenId": 2
+  },
+  {
+    "message": "I want to add new screen for demo",
+    "type": "user",
+    "timestamp": "2025-03-04T03:06:36.279Z",
+    "previousBranch": "main",
+    "screenId": 3
   }
 ]
