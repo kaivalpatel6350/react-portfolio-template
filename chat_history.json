@@ -11,5 +11,11 @@
     "type": "bot",
     "timestamp": "2025-03-04T03:59:16.808Z",
     "screenId": 1
+  },
+  {
+    "message": "New component created successfully!",
+    "type": "bot",
+    "timestamp": "2025-03-04T03:59:50.243Z",
+    "screenId": 1
   }
 ]
